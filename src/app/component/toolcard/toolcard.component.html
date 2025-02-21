@@ -1,32 +1,14 @@
-
-<div class="flex-1 order-2 border-4 border-gray-500 m-5 p-8 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-75">
-  <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
-    <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg"  alt="" class="rounded-3xl w-20 h-20" />
-      <div class="ml-5">
-        <span class="block text-2xl font-semibold">Basic</span>
-        <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">10 </span></span><span class="text-gray-500 font-medium">/ user</span>
-      </div>
+<div class="flex-1 order-2 border-4 border-gray-500 m-5 p-8 bg-white shadow-xl sm:w-96 lg:w-85 h-[530px] overflow-hidden">
+  <div class="mb-7 pb-7 border-b border-gray-300 ">
+    <img [src]="imageUrl" [alt]="title" class="rounded-3xl w-20 h-20 mb-7 justify-center" />
+    <div class="m-1">
+      <span class="block text-2xl font-semibold">{{ title }}</span>
+    </div>
   </div>
-    <ul class="mb-7 font-medium text-gray-500">
-      <li class="flex text-lg mb-2">
-        <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-            <span class="ml-3">Get started with <span class="text-black">messaging</span></span>
-      </li>
-      <li class="flex text-lg mb-2">
-        <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-          <span class="ml-3">Flexible <span class="text-black">team meetings</span></span>
-        </li>
-        <li class="flex text-lg">
-          <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-            <span class="ml-3"><span class="text-black">5 TB</span> cloud storage</span>
-        </li>
-    </ul>
-    <a href="#/" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
-          Choose Plan
-      <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
-    </a>
+  <ul class="mb-7 font-medium text-gray-500">
+    <li *ngFor="let highlight of highlights" class="flex text-lg mb-2">
+      <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+      <span class="ml-3"><span class="text-black">{{ highlight.boldText }}</span> {{ highlight.text }}</span>
+    </li>
+  </ul>
 </div>
-
-  
-
-  

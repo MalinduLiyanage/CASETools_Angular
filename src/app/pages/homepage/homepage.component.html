@@ -1,20 +1,76 @@
 <app-banner></app-banner>
-<div class="max-w-md mx-auto mb-14 text-center">
-    <h1 class="text-4xl font-semibold mt-6 lg:text-5xl"><span class="text-indigo-600">CASE Tools</span> you need!</h1>
-    <p class="text-xl text-gray-500 font-medium">Choose a plan that works best for you and your team.</p>
+<div class="max-w-lg mx-auto mb-10 text-center">
+    <h1 class="text-4xl font-semibold mt-6 lg:text-5xl"><span class="text-indigo-600">CASE Tools</span> you need</h1>
+
   </div>
   
   <div class="container mx-auto px-4">
     <div class="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-      <app-toolcard></app-toolcard>
-      <app-toolcard></app-toolcard>
-      <app-toolcard></app-toolcard>
-      <app-toolcard></app-toolcard>
-      <app-toolcard></app-toolcard>
-      <app-toolcard></app-toolcard>
+      <app-toolcard
+        [title]="'Business Process Analysis with Activity Diagrams'"
+        [imageUrl]="'https://res.cloudinary.com/williamsondesign/abstract-1.jpg'"
+        [highlights]="[
+          { text: 'for better understanding', boldText: 'Visualize workflows' },
+          { text: 'and optimize processes', boldText: 'Identify bottlenecks' }
+        ]"
+        [learnMoreLink]="'/business-process-analysis'">
+      </app-toolcard>
+      <app-toolcard
+        [title]="'Database Design Simplified with ER Modeling'"
+        [imageUrl]="'https://res.cloudinary.com/williamsondesign/abstract-2.jpg'"
+        [highlights]="[
+          { text: 'and relationships', boldText: 'Define entities, attributes,' },
+          { text: 'and scalable database design', boldText: 'Ensure efficient' }
+        ]"
+        [learnMoreLink]="'#/database-design'">
+      </app-toolcard>
+
+      <app-toolcard
+        [title]="'System Modeling with UML Diagrams'"
+        [imageUrl]="'https://res.cloudinary.com/williamsondesign/abstract-3.jpg'"
+        [highlights]="[
+          { text: 'such as Use Case, Class, and Sequence diagrams', boldText: 'Use UML diagrams' },
+          { text: 'for better clarity and structure', boldText: 'Standardize system design' }
+        ]"
+        [learnMoreLink]="'#/uml-modeling'">
+      </app-toolcard>
+
+      <app-toolcard
+        [title]="'Automated Code Generation'"
+        [imageUrl]="'https://res.cloudinary.com/williamsondesign/abstract-3.jpg'"
+        [highlights]="[
+          { text: 'into working code automatically', boldText: 'Convert models' },
+          { text: 'and reduce manual effort', boldText: 'Minimize coding errors' }
+        ]"
+        [learnMoreLink]="'#/automated-code-generation'">
+      </app-toolcard>
+
+    <app-toolcard
+      [title]="'Software Requirement Specification (SRS) Documentation'"
+      [imageUrl]="'https://res.cloudinary.com/williamsondesign/abstract-2.jpg'"
+      [highlights]="[
+        { text: 'and detailed requirements', boldText: 'Create structured' },
+        { text: 'between stakeholders', boldText: 'Improve communication' }
+      ]"
+      [learnMoreLink]="'#/srs-documentation'"
+    ></app-toolcard>
+
+    <app-toolcard
+      [title]="'Business Rule Validation & Decision Modeling'"
+      [imageUrl]="'https://res.cloudinary.com/williamsondesign/abstract-1.jpg'"
+      [highlights]="[
+        { text: 'using Decision Tables & BPMN', boldText: 'Define business rules' },
+        { text: 'in business logic execution', boldText: 'Ensure accuracy' }
+      ]"
+      [learnMoreLink]="'#/business-rule-validation'"
+    ></app-toolcard>
+
     </div>
   </div>
-  
+  <div class="max-w-lg mx-auto mb-10 text-center">
+    <h1 class="text-4xl font-semibold mt-6 lg:text-5xl"><span class="text-indigo-600">Questions</span> & Answers</h1>
+
+  </div>
   <app-faqsection></app-faqsection>
   <app-footer></app-footer>
 
