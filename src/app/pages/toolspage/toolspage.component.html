@@ -1,1 +1,47 @@
-<p>toolspage works!</p>
+<div class="relative overflow-hidden bg-white">
+  <section class="relative mx-auto flex max-w-7xl flex-col items-center px-4 pt-10 text-center sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-none">
+      <h2 id="sale-heading" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">Get the <span class="text-purple-blue-500">Best Price</span> for your <span class="text-purple-blue-500">Service!</span></h2>
+      <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">Don’t miss the opportunity to enhance your software development with our expert solutions—get started today!</p>
+    </div>
+  </section>
+</div>
+
+<div class="container mx-auto px-4 mt-5">
+    <div class="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+        <app-servicecard 
+        [title]="'Business Process Analysis with Activity Diagrams'"
+        [highlights]="[
+          { text: 'for better understanding', boldText: 'Visualize workflows' }
+        ]"
+        ></app-servicecard>
+        <app-servicecard 
+        [title]="'Database Design Simplified with ER Modeling'"
+        [highlights]="[
+          { text: 'and relationships', boldText: 'Define entities, attributes,' },
+        ]"></app-servicecard>
+        <app-servicecard 
+        [title]="'System Modeling with UML Diagrams'"
+        [highlights]="[
+          { text: 'such as Use Case, Class, and Sequence diagrams', boldText: 'Use UML diagrams' },
+        ]"></app-servicecard>
+        <app-servicecard 
+        [title]="'Automated Code Generation'"
+        [highlights]="[
+          { text: 'into working code automatically', boldText: 'Convert models' },
+        ]"></app-servicecard>
+        <app-servicecard 
+        [title]="'SRS Documentation'"
+        [highlights]="[
+          { text: 'and detailed requirements', boldText: 'Create structured' },
+        ]"></app-servicecard>
+        <app-servicecard 
+        [title]="'Business Rule Validation & Decision Modeling'"
+        [highlights]="[
+          { text: 'using Decision Tables & BPMN', boldText: 'Define business rules' },
+        ]">
+        </app-servicecard>
+  </div>
+</div>
+
+<app-footer></app-footer>
